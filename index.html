@@ -5,309 +5,338 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>샐러디</title>
+  <title>샐러디 — 건강한 패스트푸드</title>
   <!-- css style -->
   <link rel="stylesheet" href="css/style.css">
   <!-- css resizing -->
-  <link rel="stylesheet" href="css/resizing.css">
+  <!-- <link rel="stylesheet" href="css/resizing.css"> -->
   <!-- css reset -->
-  <link rel="stylesheet" href="../../../reset.css">
-  <!-- slick.css -->
-  <link rel="stylesheet" href="../plugin/slick/slick.css">
-  <!-- slick-theme.css -->
-  <link rel="stylesheet" href="../plugin/slick/slick-theme.css">
-  <!-- jquery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <!-- slick.js -->
-  <script src="../plugin/slick/slick.js"></script>
-  <!-- fontawesome -->
-  <script src="https://use.fontawesome.com/1fa7e3c774.js"></script>
+  <!-- <link rel="stylesheet" href="../../../reset.css"> -->
+
   <!-- script js -->
   <script src="js/script.js"></script>
 </head>
 
 <body>
-  <div id="wrap">
-    <div class="overlay"></div><!-- resizing gnb overlay -->
-    <header>
-      <div id="header" class="header-inner">
-        <div class="logo">
-          <a href="#"><img src="./img/logo.jpg" alt="logo"></a>
-        </div>
-        <div class="gnb">
-          <ul class="menu-items">
-            <li><a href="#">홈</a></li>
-            <li><a href="#">메뉴</a></li>
-            <li><a href="#">매장</a></li>
-            <li><a href="#">샐럽오더</a></li>
-            <li><a href="#">프랜차이즈</a></li>
-            <li><a href="#">새소식</a></li>
-            <li><a href="#">문의</a></li>
-          </ul>
-        </div>
-        <div class="trigger">
-          <i class="fa fa-bars" aria-hidden="true"></i>
-        </div>
+  <!-- resizing gnb overlay -->
+  <div class="gnb__overlay" id="gnb-overlay" aria-hidden="true"></div>
+
+  <!-- 헤더 -->
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+      <a href="#" class="site-header__logo" aria-label="샐러디 홈으로">
+        <img src="img/logo.jpg" alt="샐러디 로고" />
+      </a>
+      <nav class="gnb" aria-label="주요 메뉴">
+        <!-- 햄버거 버튼 -->
+        <button type="button" class="gnb__toggle" aria-expanded="false" aria-controls="gnb-list" aria-label="메뉴 열기">
+          <span class="gnb__toggle-bar"></span>
+          <span class="gnb__toggle-bar"></span>
+          <span class="gnb__toggle-bar"></span>
+        </button>
+        <ul class="gnb__list" id="gnb-list" role="list">
+          <li class="gnb__item"><a href="#">홈</a></li>
+          <li class="gnb__item"><a href="#">메뉴</a></li>
+          <li class="gnb__item"><a href="#">매장</a></li>
+          <li class="gnb__item"><a href="#">샐럽오더</a></li>
+          <li class="gnb__item"><a href="#">프랜차이즈</a></li>
+          <li class="gnb__item"><a href="#">새소식</a></li>
+          <li class="gnb__item"><a href="#">문의</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- 히어로 슬라이더 (PC) -->
+    <section class="hero" aria-label="메인 슬라이더">
+      <!-- 배경 -->
+      <div class="hero__bg-list" aria-hidden="true">
+        <div class="hero__bg-item is-active"></div>
+        <div class="hero__bg-item"></div>
+        <div class="hero__bg-item"></div>
       </div>
-    </header><!-- <header> -->
-    <section class="slide">
-      <div class="slide-bg">
-        <div class="bg1 active"></div>
-        <div class="bg2"></div>
-        <div class="bg3"></div>
-      </div>
-      <div class="slide-bgColor">
-        <div class="slide-inner">
-          <input type="radio" name="tab-menu" id="tab1" checked>
-          <input type="radio" name="tab-menu" id="tab2">
-          <input type="radio" name="tab-menu" id="tab3">
-          <div class="slide-contents">
-            <div class="contents slide1">
-              <div>
-                <h2>Signature Cobb</h2>
-                <p>여섯가지 다양한 토핑을 가지런히 모아놓은 <br> 샐러디가 처음이라면 바로 추천하는 메뉴</p>
-              </div>
+      <!-- 그린 컬러 바 -->
+      <div class="hero__color-bar" aria-hidden="true"></div>
+      <!-- 콘텐츠 -->
+      <div class="hero__content">
+        <div class="hero__content-inner">
+          <div class="hero__slides">
+            <div class="hero__slide is-active">
+              <h2 class="hero__slide-title">Signature Cobb</h2>
+              <p class="hero__slide-desc">여섯가지 다양한 토핑을 가지런히 모아놓은<br />샐러디가 처음이라면 바로 추천하는 메뉴</p>
             </div>
-            <div class="contents slide2">
-              <div>
-                <h2>Tandanji</h2>
-                <p>닭가슴살에 달콤한 스윗포테이토와 고소한 견과류가! <br>탄수화물, 단백질, 지방이 골고루 들어간 인기 메뉴!</p>
-              </div>
+            <div class="hero__slide">
+              <h2 class="hero__slide-title">Tandanji</h2>
+              <p class="hero__slide-desc">닭가슴살에 달콤한 스윗포테이토와 고소한 견과류가!<br />탄수화물, 단백질, 지방이 골고루 들어간 인기 메뉴!</p>
             </div>
-            <div class="contents slide3">
-              <div>
-                <h2>Chili Bacon Warm Bowl</h2>
-                <p>4가지 든든한 곡물과 신선한 채소, 계란과 베이컨의 꿀조합! <br>크리미칠리 드레싱과 함께여서 더 맛있는 JMT메뉴!</p>
-              </div>
+            <div class="hero__slide">
+              <h2 class="hero__slide-title">Chili Bacon Warm Bowl</h2>
+              <p class="hero__slide-desc">4가지 든든한 곡물과 신선한 채소, 계란과 베이컨의 꿀조합!<br />크리미칠리 드레싱과 함께여서 더 맛있는 JMT메뉴!</p>
             </div>
           </div>
-          <div class="slide-img">
-            <div class="img1"><img src="./img/seasonal_salady_img03.png" alt=""></div>
-            <div class="img2"><img src="./img/seasonal_salady_img02.png" alt=""></div>
-            <div class="img3"><img src="./img/seasonal_bowl_img01.png" alt=""></div>
-          </div>
-          <div class="slide-btn">
-            <label for="tab1"></label>
-            <label for="tab2"></label>
-            <label for="tab3"></label>
-          </div>
-        </div>
-      </div>
-      <div class="resizing-slide slick-slider">
-        <div class="content">
-          <img src="img/resizing_slide1.jpg" alt="slide1">
-        </div>
-        <div class="content">
-          <img src="img/resizing_slide2.jpg" alt="slide2">
-        </div>
-        <div class="content">
-          <img src="img/resizing_slide3.jpg" alt="slide3">
-        </div>
-      </div>
-    </section><!-- <section-slide> -->
-    <section class="expln">
-      <div class="expln-inner">
-        <div class="expln-item">
-          <i class="fa fa-balance-scale" aria-hidden="true"></i>
-          <h3>균형</h3>
-          <p>샐러디는 3대 영양소인 탄수화물, 단백질, 지방의 적절한 분배와 균형을 추구합니다.<br>개개인의 식습관에 따라 탄수화물, 단백질, 지방간의 구성 비율이 다양한 샐러디의
-            메뉴들을 선택할 수 있습니다.</p>
-        </div>
-        <div class="expln-item">
-          <i class="fa fa-plus-circle" aria-hidden="true"></i>
-          <h3>더하기</h3>
-          <p>일반적인 식습관을 가지고 있는 대부분의 사람들은 비타민, 무기질, 식이섬유 섭취가 부족합니다.<br>샐러디의 다양한 종류의 채소와 토핑들은 평소 섭취가 부족한 영양소들을
-            더하는데 도움을 줍니다.</p>
-        </div>
-        <div class="expln-item">
-          <i class="fa fa-minus-circle" aria-hidden="true"></i>
-          <h3>빼기</h3>
-          <p>샐러디의 메뉴들은 다른 일반적인 음식 대비 당, 포화지방, 나트륨 함량이 적습니다.<br>대부분의 성인은 세 가지 영양소를 권장량에 비해 더 많이 섭취하고
-            있습니다.<br>샐러디는 기존 메뉴에서 빼야 할 영양소는 줄여가고, 맛과 품질을 유지하는 선에서 레시피 개선에 대한 연구를 지속하고 있습니다.</p>
-        </div>
-      </div>
-    </section><!-- <section-expln> -->
-    <section class="menu">
-      <div class="menu-inner">
-        <div class="menu-title">
-          <h1>HELLO & WELCOME</h1>
-          <p>샐러디는 영양학적인 고려하에 메뉴를 구성하며, 이러한 노력이 궁극적으로 고객분들의 건강에 도움이 될 것이라고 믿습니다.</p>
-        </div>
-        <hr>
-        <div class="menu-gnb">
-          <ul class="clearfix">
-            <li>
-              <a href="#"><span>Seasonal Menu</span><i class="fa fa-cutlery" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a href="#"><span>Warm Bowl</span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a href="#"><span>Salady</span><i class="fa fa-star-o" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a href="#"><span>Sand</span><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a href="#"><span>Wrap</span><i class="fa fa-lemon-o" aria-hidden="true"></i></a>
-            </li>
-            <li>
-              <a href="#"><span>Warm Wrap</span><i class="fa fa-apple" aria-hidden="true"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section><!-- <section-menu> -->
-    <section class="best-menu">
-      <div class="bm-inner">
-        <div class="bm-title">
-          <h2>Best<br>Menu</h2>
-          <div class="bm-btn"><a href="#">more</a></div>
-          <div class="bg"></div>
-        </div>
-        <div class="bm-item">
-          <div class="bm-item-all">
-            <div class="bm-card">
-              <img src="img/seasonal_salady_img07.png" alt="바질 파스타">
-              <div class="title">
-                <h3>바질 파스타</h3>
-                <span>BASIL PASTA</span>
-                <p>바질페스토, 파스타, 모짜렐라 펄, 견과류, 올리브 *오리엔탈</p>
-              </div>
+          <!-- 메뉴 이미지 -->
+          <div class="hero__img-wrap" aria-hidden="true">
+            <div class="hero__img-item is-active">
+              <img src="img/seasonal_salady_img03.png" alt="" />
             </div>
-            <div class="bm-card">
-              <img src="img/seasonal_bowl_img01.png" alt="칠리베이컨">
-              <div class="title">
-                <h3>칠리베이컨</h3>
-                <span>CHILLI BACON</span>
-                <p>베이컨, 에그, 옥수수, 양파플레이 *크리미칠리</p>
-              </div>
+            <div class="hero__img-item">
+              <img src="img/seasonal_salady_img02.png" alt="" />
             </div>
-            <div class="bm-card">
-              <div class="bm-card-img">
-                <img src="img/seasonal_bowl_img02.png" alt="우삼겹">
-              </div>
-              <div class="title">
-                <h3>우삼겹</h3>
-                <span>BEEF LOIN</span>
-                <p>우삼겹, 양파, 견과류 *오리엔탈</p>
-              </div>
-            </div>
-            <div class="bm-card">
-              <img src="img/seasonal_salady_img01.png" alt="시저치킨">
-              <div class="title">
-                <h3>시저치킨</h3>
-                <span>CAESAR CHICKEN</span>
-                <p>치킨, 크랜베리 *시저</p>
-              </div>
-            </div>
-            <div class="bm-card">
-              <img src="img/seasonal_salady_img02.png" alt="탄단지">
-              <div class="title">
-                <h3>탄단지</h3>
-                <span>TANDANJI</span>
-                <p>치킨, 스윗포테이토, 견과류, 크랜베리 *오리엔탈</p>
-              </div>
-            </div>
-            <div class="bm-card">
-              <img src="img/seasonal_salady_img03.png" alt="콥">
-              <div class="title">
-                <h3>콥</h3>
-                <span>COBB</span>
-                <p>베이컨, 에그, 옥수수, 올리브, 양파 *시저</p>
-              </div>
+            <div class="hero__img-item">
+              <img src="img/seasonal_bowl_img01.png" alt="" />
             </div>
           </div>
         </div>
       </div>
-    </section><!-- <section-best-menu> -->
-    <div class="bottom_img"></div><!-- <bottom_img> -->
-    <section class="guide">
-      <div class="guide-inner">
-        <ul class="clearfix">
-          <li>
-            <div class="card">
-              <div class="card-img">
-                <img src="img/guide-icon1.gif" alt="영양성분표">
-                <div class="img-bg"></div>
-              </div>
-              <h3>영양성분표</h3>
-              <p>
-                샐러디 전체 메뉴의 영양성분표입니다.<br>본인의 식습관과 식단을 고려하여 알맞은 메뉴를 선택하고 부족한 영양소는 토핑 추가 등을 통해 보완하세요.
-              </p>
-              <a href="#" class="btn">영양성분표 보기</a>
-            </div>
+      <!-- 슬라이드 컨트롤 -->
+      <div class="hero__controls" role="tablist" aria-label="슬라이드 선택">
+        <button type="button" class="hero__control-btn is-active" role="tab" aria-selected="true"
+          aria-label="1번 슬라이드"></button>
+        <button type="button" class="hero__control-btn" role="tab" aria-selected="false" aria-label="2번 슬라이드"></button>
+        <button type="button" class="hero__control-btn" role="tab" aria-selected="false" aria-label="3번 슬라이드"></button>
+      </div>
+    </section>
+
+    <!-- 히어로 슬라이더 (모바일) -->
+    <section class="hero__mobile" aria-label="메인 슬라이더 (모바일)">
+      <div class="hero__mobile-list" id="mobile-slider">
+        <div class="hero__mobile-item">
+          <img src="img/resizing_slide1.jpg" alt="슬라이드 1" />
+        </div>
+        <div class="hero__mobile-item">
+          <img src="img/resizing_slide2.jpg" alt="슬라이드 2" />
+        </div>
+        <div class="hero__mobile-item">
+          <img src="img/resizing_slide3.jpg" alt="슬라이드 3" />
+        </div>
+      </div>
+      <div class="hero__mobile-dots" role="tablist" aria-label="슬라이드 선택">
+        <button type="button" class="hero__mobile-dot is-active" role="tab" aria-selected="true"
+          aria-label="1번 슬라이드"></button>
+        <button type="button" class="hero__mobile-dot" role="tab" aria-selected="false" aria-label="2번 슬라이드"></button>
+        <button type="button" class="hero__mobile-dot" role="tab" aria-selected="false" aria-label="3번 슬라이드"></button>
+      </div>
+    </section>
+
+    <!-- 영양 섹션 -->
+    <section class="nutrition" aria-label="샐러디 영양 철학">
+      <div class="l-inner">
+        <ul class="nutrition__list">
+          <li class="nutrition__item">
+            <span class="nutrition__icon" aria-hidden="true">⚖️</span>
+            <h2 class="nutrition__title">균형</h2>
+            <p class="nutrition__desc">샐러디는 3대 영양소인 탄수화물, 단백질, 지방의 적절한 분배와 균형을 추구합니다. 개개인의 식습관에 따라 구성 비율이 다양한 메뉴들을 선택할 수
+              있습니다.</p>
           </li>
-          <li>
-            <div class="card">
-              <div class="card-img">
-                <img src="img/guide-icon2.gif" alt="칼로리 계산하기">
-                <div class="img-bg"></div>
-              </div>
-              <h3>칼로리 계산하기</h3>
-              <p>
-                샐러디 전체 메뉴의 칼로리를 계산할 수 있는 기능입니다.
-              </p>
-              <a href="#" class="btn">칼로리 계산하기</a>
-            </div>
+          <li class="nutrition__item">
+            <span class="nutrition__icon" aria-hidden="true">➕</span>
+            <h2 class="nutrition__title">더하기</h2>
+            <p class="nutrition__desc">일반적인 식습관을 가진 대부분의 사람들은 비타민, 무기질, 식이섬유 섭취가 부족합니다. 샐러디의 다양한 채소와 토핑들은 부족한 영양소를 더하는 데
+              도움을 줍니다.</p>
           </li>
-          <li>
-            <div class="card">
-              <div class="card-img">
-                <img src="img/guide-icon3.gif" alt="칼로리표">
-                <div class="img-bg"></div>
-              </div>
-              <h3>칼로리표</h3>
-              <p>
-                보편적인 성인 권장 일일 칼로리는 남성 2700kcal, 여성 2000kcal 입니다.<br>하지만 개인의 나이, 기초대사량에 따라 권장 칼로리는
-                달라집니다.<br>본인에게 맞는 열량을 확인하고 다른 끼니의 열량을 고려하여 샐러디 메뉴를 선택하세요.
-              </p>
-              <a href="#" class="btn">칼로리표 보기</a>
-            </div>
-          </li>
-          <li>
-            <div class="card">
-              <div class="card-img">
-                <img src="img/guide-icon4.gif" alt="알레르기 정보">
-                <div class="img-bg"></div>
-              </div>
-              <h3>알레르기 정보</h3>
-              <p>
-                특정 음식에 대해 알레르기가 있으신 고객분께서는 메뉴 선택 전에 알레르기 정보를 꼭 확인하시기 바랍니다.
-              </p>
-              <a href="#" class="btn">알레르기 정보 보기</a>
-            </div>
+          <li class="nutrition__item">
+            <span class="nutrition__icon" aria-hidden="true">➖</span>
+            <h2 class="nutrition__title">빼기</h2>
+            <p class="nutrition__desc">샐러디의 메뉴들은 다른 일반적인 음식 대비 당, 포화지방, 나트륨 함량이 적습니다. 빼야 할 영양소는 줄이고, 맛과 품질을 유지하는 레시피 개선을
+              지속합니다.</p>
           </li>
         </ul>
       </div>
-    </section><!-- <section-guide> -->
-    <footer>
-      <div class="footer-inner">
-        <div class="address">
-          <address>
-            회사명 : ㈜샐러디사업자등록번호 : 681-86-00031 COPYRIGHT(C) 2021 ㈜샐러디. <br> CO.LTD ALL RIGHT RESERVED.
-          </address>
-        </div>
-        <div class="foot-icon">
-          <ul>
-            <li>
-              <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+    </section>
+
+    <!-- 메뉴 섹션 -->
+    <section class="menu-section" aria-label="메뉴 카테고리">
+      <div class="l-inner">
+        <h2 class="menu-section__heading">HELLO &amp; WELCOME</h2>
+        <p class="menu-section__desc">샐러디는 영양학적인 고려하에 메뉴를 구성하며, 이러한 노력이 궁극적으로 고객분들의 건강에 도움이 될 것이라고 믿습니다.</p>
+        <hr class="menu-section__divider" />
+        <nav aria-label="메뉴 카테고리 이동">
+          <ul class="menu-nav__list">
+            <li class="menu-nav__item">
+              <a href="#" aria-label="Seasonal Menu 보기">
+                <span class="menu-nav__label">Seasonal Menu</span>
+                <span class="menu-nav__icon" aria-hidden="true">🍽</span>
+              </a>
             </li>
-            <li>
-              <a href="#"><img src="img/gnb_blog_ico.png" alt="blog"></a>
+            <li class="menu-nav__item">
+              <a href="#" aria-label="Warm Bowl 보기">
+                <span class="menu-nav__label">Warm Bowl</span>
+                <span class="menu-nav__icon" aria-hidden="true">👍</span>
+              </a>
             </li>
-            <li>
-              <a href="#"><img src="img/gnb_kko_ico.png" alt="kko"></a>
+            <li class="menu-nav__item">
+              <a href="#" aria-label="Salady 보기">
+                <span class="menu-nav__label">Salady</span>
+                <span class="menu-nav__icon" aria-hidden="true">⭐</span>
+              </a>
+            </li>
+            <li class="menu-nav__item">
+              <a href="#" aria-label="Sand 보기">
+                <span class="menu-nav__label">Sand</span>
+                <span class="menu-nav__icon" aria-hidden="true">🥗</span>
+              </a>
+            </li>
+            <li class="menu-nav__item">
+              <a href="#" aria-label="Wrap 보기">
+                <span class="menu-nav__label">Wrap</span>
+                <span class="menu-nav__icon" aria-hidden="true">🍋</span>
+              </a>
+            </li>
+            <li class="menu-nav__item">
+              <a href="#" aria-label="Warm Wrap 보기">
+                <span class="menu-nav__label">Warm Wrap</span>
+                <span class="menu-nav__icon" aria-hidden="true">🍎</span>
+              </a>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
-    </footer><!-- <footer> -->
-    <div class="top_btn">
-      <a href="#">TOP<i class="fa fa-caret-up" aria-hidden="true"></i>
-      </a>
-    </div><!-- <top_btn> -->
-  </div><!-- wrap -->
+    </section>
+
+    <!-- 베스트 메뉴 -->
+    <section class="best-menu" aria-label="베스트 메뉴">
+      <div class="best-menu__title-area">
+        <h2 class="best-menu__heading">Best<br />Menu</h2>
+        <a href="#" class="best-menu__more" aria-label="베스트 메뉴 더보기">more</a>
+      </div>
+      <ul class="best-menu__card-list">
+        <li class="best-menu__card">
+          <img class="best-menu__card-img" src="img/seasonal_salady_img07.png" alt="바질 파스타" />
+          <div class="best-menu__card-body">
+            <h3 class="best-menu__card-name">바질 파스타</h3>
+            <span class="best-menu__card-en">BASIL PASTA</span>
+            <p class="best-menu__card-desc">바질페스토, 파스타, 모짜렐라 펄, 견과류, 올리브 *오리엔탈</p>
+          </div>
+        </li>
+        <li class="best-menu__card">
+          <img class="best-menu__card-img" src="img/seasonal_bowl_img01.png" alt="칠리베이컨" />
+          <div class="best-menu__card-body">
+            <h3 class="best-menu__card-name">칠리베이컨</h3>
+            <span class="best-menu__card-en">CHILLI BACON</span>
+            <p class="best-menu__card-desc">베이컨, 에그, 옥수수, 양파플레이 *크리미칠리</p>
+          </div>
+        </li>
+        <li class="best-menu__card">
+          <img class="best-menu__card-img" src="img/seasonal_bowl_img02.png" alt="우삼겹" />
+          <div class="best-menu__card-body">
+            <h3 class="best-menu__card-name">우삼겹</h3>
+            <span class="best-menu__card-en">BEEF LOIN</span>
+            <p class="best-menu__card-desc">우삼겹, 양파, 견과류 *오리엔탈</p>
+          </div>
+        </li>
+        <li class="best-menu__card">
+          <img class="best-menu__card-img" src="img/seasonal_salady_img01.png" alt="시저치킨" />
+          <div class="best-menu__card-body">
+            <h3 class="best-menu__card-name">시저치킨</h3>
+            <span class="best-menu__card-en">CAESAR CHICKEN</span>
+            <p class="best-menu__card-desc">치킨, 크랜베리 *시저</p>
+          </div>
+        </li>
+        <li class="best-menu__card">
+          <img class="best-menu__card-img" src="img/seasonal_salady_img02.png" alt="탄단지" />
+          <div class="best-menu__card-body">
+            <h3 class="best-menu__card-name">탄단지</h3>
+            <span class="best-menu__card-en">TANDANJI</span>
+            <p class="best-menu__card-desc">치킨, 스윗포테이토, 견과류, 크랜베리 *오리엔탈</p>
+          </div>
+        </li>
+        <li class="best-menu__card">
+          <img class="best-menu__card-img" src="img/seasonal_salady_img03.png" alt="콥" />
+          <div class="best-menu__card-body">
+            <h3 class="best-menu__card-name">콥</h3>
+            <span class="best-menu__card-en">COBB</span>
+            <p class="best-menu__card-desc">베이컨, 에그, 옥수수, 올리브, 양파 *시저</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 배너 -->
+    <div class="banner" role="img" aria-label="샐러디 브랜드 이미지"></div>
+
+    <!-- 가이드 섹션 -->
+    <section class="guide" aria-label="영양 가이드">
+      <div class="l-inner">
+        <ul class="guide__list">
+          <li class="guide__item">
+            <div class="guide__img-wrap">
+              <div class="guide__img-bg" aria-hidden="true"></div>
+              <img class="guide__img" src="img/guide-icon1.gif" alt="" aria-hidden="true" />
+            </div>
+            <h2 class="guide__title">영양성분표</h2>
+            <p class="guide__desc">샐러디 전체 메뉴의 영양성분표입니다. 본인의 식습관과 식단을 고려하여 알맞은 메뉴를 선택하고 부족한 영양소는 토핑 추가 등을 통해 보완하세요.</p>
+            <a href="#" class="guide__btn">영양성분표 보기</a>
+          </li>
+          <li class="guide__item">
+            <div class="guide__img-wrap">
+              <div class="guide__img-bg" aria-hidden="true"></div>
+              <img class="guide__img" src="img/guide-icon2.gif" alt="" aria-hidden="true" />
+            </div>
+            <h2 class="guide__title">칼로리 계산하기</h2>
+            <p class="guide__desc">샐러디 전체 메뉴의 칼로리를 계산할 수 있는 기능입니다.</p>
+            <a href="#" class="guide__btn">칼로리 계산하기</a>
+          </li>
+          <li class="guide__item">
+            <div class="guide__img-wrap">
+              <div class="guide__img-bg" aria-hidden="true"></div>
+              <img class="guide__img" src="img/guide-icon3.gif" alt="" aria-hidden="true" />
+            </div>
+            <h2 class="guide__title">칼로리표</h2>
+            <p class="guide__desc">보편적인 성인 권장 일일 칼로리는 남성 2700kcal, 여성 2000kcal입니다. 본인에게 맞는 열량을 확인하고 다른 끼니의 열량을 고려하여 메뉴를
+              선택하세요.</p>
+            <a href="#" class="guide__btn">칼로리표 보기</a>
+          </li>
+          <li class="guide__item">
+            <div class="guide__img-wrap">
+              <div class="guide__img-bg" aria-hidden="true"></div>
+              <img class="guide__img" src="img/guide-icon4.gif" alt="" aria-hidden="true" />
+            </div>
+            <h2 class="guide__title">알레르기 정보</h2>
+            <p class="guide__desc">특정 음식에 대해 알레르기가 있으신 고객분께서는 메뉴 선택 전에 알레르기 정보를 꼭 확인하시기 바랍니다.</p>
+            <a href="#" class="guide__btn">알레르기 정보 보기</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+      <address class="site-footer__address" aria-label="회사 정보">
+        회사명 : ㈜샐러디 | 사업자등록번호 : 681-86-00031<br />
+        COPYRIGHT(C) 2021 ㈜샐러디. CO.LTD ALL RIGHT RESERVED.
+      </address>
+      <ul class="site-footer__sns" aria-label="SNS 링크">
+        <li class="site-footer__sns-item">
+          <a href="#" aria-label="인스타그램">
+            <img src="img/gnb_blog_ico.png" alt="인스타그램" />
+          </a>
+        </li>
+        <li class="site-footer__sns-item">
+          <a href="#" aria-label="블로그">
+            <img src="img/gnb_blog_ico.png" alt="블로그" />
+          </a>
+        </li>
+        <li class="site-footer__sns-item">
+          <a href="#" aria-label="카카오">
+            <img src="img/gnb_kko_ico.png" alt="카카오" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- TOP 버튼 -->
+  <div class="top-btn" id="top-btn" aria-hidden="true">
+    <a href="#main-content" class="top-btn__link" aria-label="페이지 상단으로 이동">
+      TOP ↑
+    </a>
+  </div>
+
 </body>
 
 </html>
