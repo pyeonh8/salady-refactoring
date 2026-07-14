@@ -58,6 +58,17 @@
   .best-menu__heading {
     font-size: 56px;
   }
+
+  :root {
+    --header-h: 80px;
+  }
+
+  .site-header__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
 }
 
 @media (max-width: 899px) {

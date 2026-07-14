@@ -25,7 +25,7 @@
   <header class="site-header" role="banner">
     <div class="site-header__inner">
       <a href="#" class="site-header__logo" aria-label="샐러디 홈으로">
-        <img src="img/logo.jpg" alt="샐러디 로고" />
+        <img src="img/logo.png" alt="샐러디 로고" />
       </a>
       <nav class="gnb" aria-label="주요 메뉴">
         <!-- 햄버거 버튼 -->
@@ -51,51 +51,63 @@
 
     <!-- 히어로 슬라이더 (PC) -->
     <section class="hero" aria-label="메인 슬라이더">
+
       <!-- 배경 -->
       <div class="hero__bg-list" aria-hidden="true">
         <div class="hero__bg-item is-active"></div>
         <div class="hero__bg-item"></div>
         <div class="hero__bg-item"></div>
       </div>
+
       <!-- 그린 컬러 바 -->
-      <div class="hero__color-bar" aria-hidden="true"></div>
-      <!-- 콘텐츠 -->
-      <div class="hero__content">
-        <div class="hero__content-inner">
-          <div class="hero__slides">
-            <div class="hero__slide is-active">
-              <h2 class="hero__slide-title">Signature Cobb</h2>
-              <p class="hero__slide-desc">여섯가지 다양한 토핑을 가지런히 모아놓은<br />샐러디가 처음이라면 바로 추천하는 메뉴</p>
+      <div class="hero__color-bar" aria-hidden="true">
+
+        <!-- 콘텐츠 -->
+        <div class="hero__content">
+          <div class="hero__content-inner">
+
+            <!-- 메뉴 이미지 -->
+            <div class="hero__img-wrap" aria-hidden="true">
+              <div class="hero__img-item is-active">
+                <img src="img/seasonal_salady_img03.png" alt="" />
+              </div>
+              <div class="hero__img-item">
+                <img src="img/seasonal_salady_img02.png" alt="" />
+              </div>
+              <div class="hero__img-item">
+                <img src="img/seasonal_bowl_img01.png" alt="" />
+              </div>
             </div>
-            <div class="hero__slide">
-              <h2 class="hero__slide-title">Tandanji</h2>
-              <p class="hero__slide-desc">닭가슴살에 달콤한 스윗포테이토와 고소한 견과류가!<br />탄수화물, 단백질, 지방이 골고루 들어간 인기 메뉴!</p>
-            </div>
-            <div class="hero__slide">
-              <h2 class="hero__slide-title">Chili Bacon Warm Bowl</h2>
-              <p class="hero__slide-desc">4가지 든든한 곡물과 신선한 채소, 계란과 베이컨의 꿀조합!<br />크리미칠리 드레싱과 함께여서 더 맛있는 JMT메뉴!</p>
-            </div>
-          </div>
-          <!-- 메뉴 이미지 -->
-          <div class="hero__img-wrap" aria-hidden="true">
-            <div class="hero__img-item is-active">
-              <img src="img/seasonal_salady_img03.png" alt="" />
-            </div>
-            <div class="hero__img-item">
-              <img src="img/seasonal_salady_img02.png" alt="" />
-            </div>
-            <div class="hero__img-item">
-              <img src="img/seasonal_bowl_img01.png" alt="" />
+
+            <div class="hero__inner">
+              <div class="hero__slides">
+                <div class="hero__slide is-active">
+                  <h2 class="hero__slide-title">Signature Cobb</h2>
+                  <p class="hero__slide-desc">여섯가지 다양한 토핑을 가지런히 모아놓은<br />샐러디가 처음이라면 바로 추천하는 메뉴</p>
+                </div>
+                <div class="hero__slide">
+                  <h2 class="hero__slide-title">Tandanji</h2>
+                  <p class="hero__slide-desc">닭가슴살에 달콤한 스윗포테이토와 고소한 견과류가!<br />탄수화물, 단백질, 지방이 골고루 들어간 인기 메뉴!</p>
+                </div>
+                <div class="hero__slide">
+                  <h2 class="hero__slide-title">Chili Bacon Warm Bowl</h2>
+                  <p class="hero__slide-desc">4가지 든든한 곡물과 신선한 채소, 계란과 베이컨의 꿀조합!<br />크리미칠리 드레싱과 함께여서 더 맛있는 JMT메뉴!</p>
+                </div>
+              </div>
+
+              <!-- 슬라이드 컨트롤 -->
+              <div class="hero__controls" role="tablist" aria-label="슬라이드 선택">
+                <button type="button" class="hero__control-btn is-active" role="tab" aria-selected="true"
+                  aria-label="1번 슬라이드"></button>
+                <button type="button" class="hero__control-btn" role="tab" aria-selected="false"
+                  aria-label="2번 슬라이드"></button>
+                <button type="button" class="hero__control-btn" role="tab" aria-selected="false"
+                  aria-label="3번 슬라이드"></button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- 슬라이드 컨트롤 -->
-      <div class="hero__controls" role="tablist" aria-label="슬라이드 선택">
-        <button type="button" class="hero__control-btn is-active" role="tab" aria-selected="true"
-          aria-label="1번 슬라이드"></button>
-        <button type="button" class="hero__control-btn" role="tab" aria-selected="false" aria-label="2번 슬라이드"></button>
-        <button type="button" class="hero__control-btn" role="tab" aria-selected="false" aria-label="3번 슬라이드"></button>
+
       </div>
     </section>
 
@@ -311,11 +323,6 @@
         COPYRIGHT(C) 2021 ㈜샐러디. CO.LTD ALL RIGHT RESERVED.
       </address>
       <ul class="site-footer__sns" aria-label="SNS 링크">
-        <li class="site-footer__sns-item">
-          <a href="#" aria-label="인스타그램">
-            <img src="img/gnb_blog_ico.png" alt="인스타그램" />
-          </a>
-        </li>
         <li class="site-footer__sns-item">
           <a href="#" aria-label="블로그">
             <img src="img/gnb_blog_ico.png" alt="블로그" />
