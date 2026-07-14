@@ -37,8 +37,8 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 280px;
-    height: 100%;
+    width: 220px;
+    height: 100vh;
     background: #fff;
     z-index: 99999;
     padding: calc(var(--header-h) + var(--sp-lg)) var(--sp-lg) var(--sp-lg);
