@@ -42,17 +42,56 @@ const initGnb = () => {
 // ==============================================
 // PC 슬라이더
 // ==============================================
+const initHeroSlider = () => {
+  const bgs = document.querySelectorAll(".hero__bg-item");
+  const slides = document.querySelectorAll(".hero__slide ");
+  const imgs = document.querySelectorAll(".hero__img-item");
+  const btns = document.querySelectorAll(".hero__control-btn");
+  if (!bgs.length) return;
 
+  // 초기화
+  let bgCurrent = 0;
+  let btnCurrent = 0;
+  let timer;
+
+  // 버튼 컨트롤 슬라이드
+  btns.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+      moveToSlide(i);
+    });
+  });
+
+  const moveToSlide = (idx) => {
+    [slides, imgs, btns].forEach((list) => {
+      list.forEach((el, i) => {
+        el.classList.toggle("is-active", i === idx);
+      });
+    });
+    btns.forEach((btn, i) => btn.setAttribute("aria-selected", i === idx));
+    btnCurrent = idx;
+  };
+
+  // 배경 자동 슬라이드
+  const nextBg = () => {
+    bgCurrent = (bgCurrent + 1) % bgs.length;
+    bgs.forEach((el, i) => el.classList.toggle("is-active", i === bgCurrent));
+  };
+
+  const startAuto = () => {
+    timer = setInterval(nextBg, 3500);
+  };
+
+  startAuto();
+};
 
 // ==============================================
 // 모바일 슬라이더
 // ==============================================
-
-
 
 // ==============================================
 // HTML 로드 후 스크립트 실행
 // ==============================================
 document.addEventListener("DOMContentLoaded", () => {
   initGnb();
+  initHeroSlider();
 });
